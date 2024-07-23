@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://v0gip1k43nfr"]
+
+[ext_resource type="Texture2D" uid="uid://8kao3gqeppfe" path="res://assets/img/background/6.png" id="1_glh15"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wk7sp"]
+size = Vector2(2480, 16)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 288)
+texture = ExtResource("1_glh15")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(620, 288)
+texture = ExtResource("1_glh15")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1240, 288)
+texture = ExtResource("1_glh15")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1860, 288)
+texture = ExtResource("1_glh15")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1240, 640)
+shape = SubResource("RectangleShape2D_wk7sp")

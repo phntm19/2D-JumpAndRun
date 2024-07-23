@@ -1,0 +1,165 @@
+[gd_scene load_steps=34 format=3 uid="uid://ckmdx51wbvuls"]
+
+[ext_resource type="Texture2D" uid="uid://bw3xsi2kywe77" path="res://assets/img/dino/Idle (1).png" id="1_0j1e1"]
+[ext_resource type="Script" path="res://dino.gd" id="1_cs2d0"]
+[ext_resource type="Texture2D" uid="uid://yrgxlsykss5o" path="res://assets/img/dino/Idle (2).png" id="2_v1xda"]
+[ext_resource type="Texture2D" uid="uid://7sf0apt1jd7c" path="res://assets/img/dino/Idle (3).png" id="3_r044k"]
+[ext_resource type="Texture2D" uid="uid://dsuhdtnnq00a1" path="res://assets/img/dino/Idle (4).png" id="4_1bfnj"]
+[ext_resource type="Texture2D" uid="uid://cu7bfudq8gpwt" path="res://assets/img/dino/Idle (5).png" id="5_uwtxm"]
+[ext_resource type="Texture2D" uid="uid://bsm38ihev84uu" path="res://assets/img/dino/Idle (6).png" id="6_kp1fa"]
+[ext_resource type="Texture2D" uid="uid://btetmp6mydho8" path="res://assets/img/dino/Idle (7).png" id="7_7oqxr"]
+[ext_resource type="Texture2D" uid="uid://bxojd5ssfv8et" path="res://assets/img/dino/Idle (8).png" id="8_hn1lr"]
+[ext_resource type="Texture2D" uid="uid://b5lpkc01g47ig" path="res://assets/img/dino/Idle (9).png" id="9_4n578"]
+[ext_resource type="Texture2D" uid="uid://drq8i2m2y3rai" path="res://assets/img/dino/Idle (10).png" id="10_eh6fd"]
+[ext_resource type="Texture2D" uid="uid://cvk7leuf1b2v8" path="res://assets/img/dino/Jump (5).png" id="11_jbh7i"]
+[ext_resource type="Texture2D" uid="uid://bfstq10ooefbc" path="res://assets/img/dino/Run (1).png" id="12_dqsop"]
+[ext_resource type="Texture2D" uid="uid://bk7vipsjsx418" path="res://assets/img/dino/Run (2).png" id="13_yty33"]
+[ext_resource type="Texture2D" uid="uid://dpenn5r3tr7es" path="res://assets/img/dino/Run (3).png" id="14_f5rja"]
+[ext_resource type="Texture2D" uid="uid://dt445w5vo2780" path="res://assets/img/dino/Run (4).png" id="15_ipunw"]
+[ext_resource type="Texture2D" uid="uid://dndwctwnwuk1b" path="res://assets/img/dino/Run (5).png" id="16_g33wx"]
+[ext_resource type="Texture2D" uid="uid://d28qeq3dcq6ih" path="res://assets/img/dino/Run (6).png" id="17_r4ax3"]
+[ext_resource type="Texture2D" uid="uid://bj1kvqx8dd27t" path="res://assets/img/dino/Run (7).png" id="18_tdv7e"]
+[ext_resource type="Texture2D" uid="uid://mj81mwprt0it" path="res://assets/img/dino/Run (8).png" id="19_u2vw1"]
+[ext_resource type="Texture2D" uid="uid://wsnlrgrk70w7" path="res://assets/img/dino/Walk (1).png" id="20_xykst"]
+[ext_resource type="Texture2D" uid="uid://c30krcvxmdhwv" path="res://assets/img/dino/Walk (2).png" id="21_wpamm"]
+[ext_resource type="Texture2D" uid="uid://opj6x5bj6xfs" path="res://assets/img/dino/Walk (3).png" id="22_vt1u1"]
+[ext_resource type="Texture2D" uid="uid://c1smfawwvek7k" path="res://assets/img/dino/Walk (4).png" id="23_biijf"]
+[ext_resource type="Texture2D" uid="uid://by1t3rnm1fqev" path="res://assets/img/dino/Walk (5).png" id="24_5ilva"]
+[ext_resource type="Texture2D" uid="uid://d3rsym7lvynuq" path="res://assets/img/dino/Walk (6).png" id="25_cny0g"]
+[ext_resource type="Texture2D" uid="uid://bk4ivrs341g6g" path="res://assets/img/dino/Walk (7).png" id="26_mc726"]
+[ext_resource type="Texture2D" uid="uid://csuy1su172atu" path="res://assets/img/dino/Walk (8).png" id="27_yqdkn"]
+[ext_resource type="Texture2D" uid="uid://b1wbnubsu63is" path="res://assets/img/dino/Walk (9).png" id="28_klcui"]
+[ext_resource type="Texture2D" uid="uid://d1dj5ueohwf37" path="res://assets/img/dino/Walk (10).png" id="29_r2s26"]
+[ext_resource type="AudioStream" uid="uid://cbok1kj1i44bc" path="res://assets/sound/jump.wav" id="30_pm3si"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_il7mq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0j1e1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v1xda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r044k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1bfnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uwtxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kp1fa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7oqxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hn1lr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4n578")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eh6fd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_jbh7i")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_dqsop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yty33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_f5rja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ipunw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_g33wx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_r4ax3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tdv7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_u2vw1")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_xykst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wpamm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_vt1u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_biijf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_5ilva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_cny0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_mc726")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_yqdkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_klcui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_r2s26")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxga4"]
+size = Vector2(200, 349.474)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(0.38, 0.38)
+script = ExtResource("1_cs2d0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_il7mq")
+animation = &"run"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(-116, 14.7368)
+shape = SubResource("RectangleShape2D_vxga4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_pm3si")
+volume_db = -25.0

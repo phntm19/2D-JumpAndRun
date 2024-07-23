@@ -1,0 +1,72 @@
+[gd_scene load_steps=15 format=3 uid="uid://07f50b68ayr3"]
+
+[ext_resource type="Script" path="res://bat.gd" id="1_3axqn"]
+[ext_resource type="Texture2D" uid="uid://biwtrblkk8c15" path="res://assets/img/bat/skeleton-fly_00.png" id="1_sbljy"]
+[ext_resource type="Texture2D" uid="uid://d2gcmcxusaf4" path="res://assets/img/bat/skeleton-fly_01.png" id="2_h3u38"]
+[ext_resource type="Texture2D" uid="uid://dm2ke381khfqc" path="res://assets/img/bat/skeleton-fly_02.png" id="3_yd1dg"]
+[ext_resource type="Texture2D" uid="uid://blk471xq3ke4g" path="res://assets/img/bat/skeleton-fly_03.png" id="4_6ve4b"]
+[ext_resource type="Texture2D" uid="uid://bw8q734uk2ylx" path="res://assets/img/bat/skeleton-fly_04.png" id="5_gtruc"]
+[ext_resource type="Texture2D" uid="uid://bwjwx01ennad" path="res://assets/img/bat/skeleton-fly_05.png" id="6_ukdv6"]
+[ext_resource type="Texture2D" uid="uid://vis2j1mak0x1" path="res://assets/img/bat/skeleton-fly_06.png" id="7_fe2i6"]
+[ext_resource type="Texture2D" uid="uid://xau4q32umbgw" path="res://assets/img/bat/skeleton-fly_07.png" id="8_8ampt"]
+[ext_resource type="Texture2D" uid="uid://c4aoth20xcu53" path="res://assets/img/bat/skeleton-fly_08.png" id="9_gteib"]
+[ext_resource type="Texture2D" uid="uid://p34kjf7fjb40" path="res://assets/img/bat/skeleton-fly_09.png" id="10_kka6w"]
+[ext_resource type="Texture2D" uid="uid://bmgvh6we46foa" path="res://assets/img/bat/skeleton-fly_10.png" id="11_m00ga"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3t00m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sbljy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h3u38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yd1dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6ve4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gtruc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ukdv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fe2i6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8ampt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gteib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kka6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_m00ga")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d25y1"]
+radius = 40.1995
+
+[node name="bat" type="Area2D"]
+script = ExtResource("1_3axqn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_3t00m")
+animation = &"flying"
+autoplay = "flying"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9, 6)
+shape = SubResource("CircleShape2D_d25y1")
